@@ -1,0 +1,533 @@
+/* BASIC COLOR AND FONT VARIABLES */
+:root {
+    /* Main colors - enhanced palette */
+    --f1-red: #e10600;
+    --f1-dark-red: #ae0500;
+    --f1-black: #15151e;
+    --f1-gray: #38383f;
+    --f1-light-gray: #666670;
+    --f1-silver: #e2e2e2;
+    --f1-white: #ffffff;
+    --f1-cream: #f9f7f5;
+    --f1-accent-blue: #0046c8;
+    
+    /* Team colors */
+    --mercedes-color: #00d2be;
+    --redbull-color: #0600ef;
+    --ferrari-color: #dc0000;
+    
+    /* Fonts - improved typography */
+    --header-font: 'Titillium Web', sans-serif;
+    --body-font: 'Roboto', sans-serif;
+    
+    /* Enhanced shadows */
+    --shadow-normal: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
+    --shadow-subtle: 0 2px 6px rgba(0, 0, 0, 0.05);
+    
+    /* Enhanced transitions */
+    --transition-normal: 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    --transition-bounce: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* RESET STYLES - Makes elements behave consistently */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px; /* Base font size for better control */
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--f1-black);
+    background-color: var(--f1-cream);
+    line-height: 1.7;
+    letter-spacing: 0.01rem;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* LAYOUT CONTAINER - improved spacing */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* IMAGE STYLES - enhanced */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+/* LINK STYLES - improved interaction */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all var(--transition-normal);
+    position: relative;
+}
+
+a:hover {
+    color: var(--f1-red);
+}
+
+/* BUTTON STYLES - enhanced with gradients */
+.cta-button {
+    display: inline-block;
+    padding: 14px 34px;
+    font-family: var(--header-font);
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    border-radius: 6px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all var(--transition-bounce);
+    box-shadow: var(--shadow-normal);
+    border: none;
+    outline: none;
+}
+
+/* Red button - with subtle gradient */
+.cta-button.primary {
+    background: linear-gradient(135deg, var(--f1-red) 0%, var(--f1-dark-red) 100%);
+    color: var(--f1-white);
+}
+
+.cta-button.primary:hover {
+    background: linear-gradient(135deg, var(--f1-dark-red) 0%, var(--f1-dark-red) 100%);
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-2px);
+}
+
+/* Dark button - with subtle gradient */
+.cta-button.secondary {
+    background: linear-gradient(135deg, var(--f1-black) 0%, var(--f1-gray) 100%);
+    color: var(--f1-white);
+}
+
+.cta-button.secondary:hover {
+    background: linear-gradient(135deg, var(--f1-gray) 0%, var(--f1-gray) 100%);
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-2px);
+}
+
+/* HERO SECTION - enhanced with overlay blend mode */
+.hero {
+    position: relative;
+    background: url('images/f1-hero.jpg') no-repeat center center/cover;
+    height: 100vh;
+    color: var(--f1-white);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-attachment: fixed;
+}
+
+/* Dark overlay - improved with gradient for depth */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(21, 21, 30, 0.85) 0%, rgba(15, 15, 22, 0.75) 100%);
+    z-index: 1;
+    mix-blend-mode: multiply;
+}
+
+/* Hero content positioning */
+.hero .container {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+}
+
+/* F1 Logo styling - enhanced */
+.hero .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 28px;
+    animation: fadeInDown 1s ease both;
+}
+
+.hero .logo .f {
+    font-family: var(--header-font);
+    font-weight: 900;
+    font-size: 6.5rem;
+    color: var(--f1-white);
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.hero .logo .one {
+    font-family: var(--header-font);
+    font-weight: 900;
+    font-size: 5rem;
+    background: linear-gradient(135deg, var(--f1-red) 0%, var(--f1-dark-red) 100%);
+    color: var(--f1-white);
+    padding: 0 18px;
+    border-radius: 6px;
+    margin-left: -12px;
+    box-shadow: var(--shadow-normal);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero text - enhanced typography */
+.hero .title {
+    font-family: var(--header-font);
+    font-size: 4.2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    animation: fadeInUp 1s ease 0.3s both;
+}
+
+.hero .subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-top: 14px;
+    margin-bottom: 46px;
+    letter-spacing: 4px;
+    opacity: 0.95;
+    animation: fadeInUp 1s ease 0.5s both;
+}
+
+/* Button container - improved layout */
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    animation: fadeInUp 1s ease 0.7s both;
+}
+
+/* NAVIGATION BAR - enhanced with backdrop filter */
+.navbar {
+    background-color: rgba(21, 21, 30, 0.95);
+    backdrop-filter: blur(8px);
+    color: var(--f1-white);
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.navbar ul li {
+    margin: 0 24px;
+}
+
+.navbar ul li a {
+    color: var(--f1-white);
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 8px 0;
+    font-size: 0.9rem;
+    position: relative;
+}
+
+/* Red underline effect on hover - improved interaction */
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--f1-red);
+    transition: width var(--transition-normal);
+}
+
+.navbar ul li a:hover::after {
+    width: 100%;
+}
+
+/* SECTION STYLES - improved spacing */
+.section {
+    padding: 80px 0;
+    position: relative;
+}
+
+.section-title {
+    font-family: var(--header-font);
+    font-size: 2.6rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 14px;
+    color: var(--f1-black);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 80px;
+    background: var(--f1-red);
+    margin: 16px auto 0;
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--f1-light-gray);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* CARD STYLES - enhanced with better shadows */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.card {
+    background: var(--f1-white);
+    border-radius: 12px;
+    box-shadow: var(--shadow-subtle);
+    overflow: hidden;
+    width: 350px;
+    text-align: left;
+    transition: all var(--transition-normal);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 1.5s ease;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 28px;
+}
+
+.card h3 {
+    font-family: var(--header-font);
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--f1-black);
+}
+
+.card p {
+    color: var(--f1-gray);
+    margin-bottom: 24px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* TEAM SPECIFIC STYLES - enhanced styling */
+.team-card.mercedes h3 {
+    color: var(--mercedes-color);
+}
+
+.team-card.redbull h3 {
+    color: var(--redbull-color);
+}
+
+.team-card.ferrari h3 {
+    color: var(--ferrari-color);
+}
+
+/* RACE CALENDAR - improved visual design */
+.races-section {
+    background: linear-gradient(135deg, #f0f0f0 0%, var(--f1-silver) 100%);
+    position: relative;
+}
+
+.race-calendar {
+    max-width: 850px;
+    margin: 0 auto 40px;
+}
+
+.race-event {
+    display: flex;
+    align-items: center;
+    background-color: var(--f1-white);
+    margin-bottom: 24px;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: var(--shadow-subtle);
+    transition: all var(--transition-normal);
+    border-left: 4px solid transparent;
+}
+
+.race-event:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow-normal);
+    border-left: 4px solid var(--f1-red);
+}
+
+.race-date {
+    font-family: var(--header-font);
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--f1-light-gray);
+    min-width: 90px;
+}
+
+.race-details {
+    flex-grow: 1;
+    padding: 0 24px;
+}
+
+.race-name {
+    font-family: var(--header-font);
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.race-location {
+    font-size: 0.92rem;
+    color: var(--f1-light-gray);
+    margin-top: 4px;
+}
+
+/* Race status indicators - improved visual design */
+.race-winner, .race-status {
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+.race-winner {
+    background-color: var(--f1-silver);
+    color: var(--f1-black);
+}
+
+.race-status {
+    background: linear-gradient(135deg, var(--f1-red) 0%, var(--f1-dark-red) 100%);
+    color: var(--f1-white);
+}
+
+.next-race {
+    border: none;
+    border-left: 4px solid var(--f1-red);
+    box-shadow: var(--shadow-normal);
+    position: relative;
+    background: linear-gradient(to right, rgba(225, 6, 0, 0.03) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+/* Add keyframe animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE STYLES - Makes the site work on different screens */
+@media (max-width: 768px) {
+    /* For tablets and smaller screens */
+    .hero .title {
+        font-size: 3rem;
+    }
+    
+    .hero .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) {
+    /* For mobile phones */
+    .hero .title {
+        font-size: 2.5rem;
+    }
+    
+    .section {
+        padding: 40px 0;
+    }
+    
+    .card {
+        width: 100%;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}

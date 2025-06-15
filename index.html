@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A detailed and fancy Formula 1 website showcasing teams, drivers, and races.">
+    <title>Formula 1 - Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&family=Titillium+Web:wght@600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="racing-stripe left"></div>
+    <div class="racing-stripe right"></div>
+
+    <header class="hero">
+        <div class="container">
+            <div class="logo">
+                <div class="f">F</div>
+                <div class="one">1</div>
+            </div>
+            <h1 class="title">FORMULA 1</h1>
+            <p class="subtitle">EXPERIENCE THE PINNACLE OF MOTORSPORT</p>
+            <div class="cta-buttons">
+                <a href="#races" class="cta-button primary">2025 SEASON</a>
+                <a href="#teams" class="cta-button secondary">TOP TEAMS</a>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+    </header>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="mobile-logo">F1</div>
+            <ul>
+                <li><a href="#teams">Teams</a></li>
+                <li><a href="#drivers">Drivers</a></li>
+                <li><a href="#races">Races</a></li>
+                <li><a href="#standings">Standings</a></li>
+                <li><a href="zasady/index.html">Rules</a></li>
+                <li><a href="historia/index.html">History</a></li>
+                <li><a href="ewolucja/index.html">Evolution</a></li>
+                <li><a href="#contact" class="contact-button">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section id="featured" class="section featured">
+            <div class="container">
+                <div class="featured-content">
+                    <h2 class="section-title">NEXT RACE: MONACO GRAND PRIX</h2>
+                    <p class="countdown">5 DAYS : 14 HOURS : 22 MINUTES</p>
+                    <p class="featured-description">The jewel in Formula 1's crown, the Monaco Grand Prix is a race like no other. Threading the barrier-lined streets of Monte Carlo tests drivers to their limits.</p>
+                    <a href="#races" class="cta-button primary">RACE DETAILS</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="teams" class="section">
+            <div class="container">
+                <h2 class="section-title">TOP TEAMS</h2>
+                <div class="section-subtitle">THE MASTERMINDS BEHIND THE MACHINES</div>
+                
+                <div class="card-container">
+                    <div class="card team-card mercedes">
+                        <div class="card-header">
+                            <span class="team-position">#1</span>
+                        </div>
+                        <img src="images/mercedes.jpg" alt="Mercedes Team">
+                        <div class="card-content">
+                            <h3>MERCEDES-AMG</h3>
+                            <div class="stats">
+                                <div class="stat"><span>Championships</span><strong>8</strong></div>
+                                <div class="stat"><span>Race Wins</span><strong>124</strong></div>
+                            </div>
+                            <p>Dominating the hybrid era with cutting-edge technology and engineering excellence.</p>
+                            <a href="#" class="card-link">TEAM PROFILE</a>
+                        </div>
+                    </div>
+                    
+                    <div class="card team-card redbull">
+                        <div class="card-header">
+                            <span class="team-position">#2</span>
+                        </div>
+                        <img src="images/redbull.jpg" alt="Red Bull Team">
+                        <div class="card-content">
+                            <h3>RED BULL RACING</h3>
+                            <div class="stats">
+                                <div class="stat"><span>Championships</span><strong>5</strong></div>
+                                <div class="stat"><span>Race Wins</span><strong>96</strong></div>
+                            </div>
+                            <p>Innovative designs and relentless performance pushing the boundaries of aerodynamics.</p>
+                            <a href="#" class="card-link">TEAM PROFILE</a>
+                        </div>
+                    </div>
+                    
+                    <div class="card team-card ferrari">
+                        <div class="card-header">
+                            <span class="team-position">#3</span>
+                        </div>
+                        <img src="images/ferrari.jpg" alt="Ferrari Team">
+                        <div class="card-content">
+                            <h3>SCUDERIA FERRARI</h3>
+                            <div class="stats">
+                                <div class="stat"><span>Championships</span><strong>16</strong></div>
+                                <div class="stat"><span>Race Wins</span><strong>242</strong></div>
+                            </div>
+                            <p>The oldest and most successful team in Formula 1 history, synonymous with racing excellence.</p>
+                            <a href="#" class="card-link">TEAM PROFILE</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="drivers" class="section">
+            <div class="container">
+                <h2 class="section-title">TOP DRIVERS</h2>
+                <div class="section-subtitle">THE ELITE ATHLETES OF FORMULA 1</div>
+                
+                <div class="card-container">
+                    <div class="card driver-card">
+                        <div class="driver-number">44</div>
+                        <img src="images/hamilton.jpg" alt="Lewis Hamilton">
+                        <div class="card-content">
+                            <h3>LEWIS HAMILTON</h3>
+                            <div class="stats">
+                                <div class="stat"><span>Championships</span><strong>7</strong></div>
+                                <div class="stat"><span>Race Wins</span><strong>103</strong></div>
+                            </div>
+                            <p>One of the greatest drivers of all time, known for his incredible pace and consistency.</p>
+                            <div class="team-tag mercedes-tag">MERCEDES</div>
+                        </div>
+                    </div>
+                    
+                    <div class="card driver-card">
+                        <div class="driver-number">1</div>
+                        <img src="images/verstappen.jpg" alt="Max Verstappen">
+                        <div class="card-content">
+                            <h3>MAX VERSTAPPEN</h3>
+                            <div class="stats">
+                                <div class="stat"><span>Championships</span><strong>3</strong></div>
+                                <div class="stat"><span>Race Wins</span><strong>58</strong></div>
+                            </div>
+                            <p>A generational talent with exceptional racecraft and aggressive driving style.</p>
+                            <div class="team-tag redbull-tag">RED BULL</div>
+                        </div>
+                    </div>
+                    
+                    <div class="card driver-card">
+                        <div class="driver-number">16</div>
+                        <img src="images/leclerc.jpg" alt="Charles Leclerc">
+                        <div class="card-content">
+                            <h3>CHARLES LECLERC</h3>
+                            <div class="stats">
+                                <div class="stat"><span>Poles</span><strong>22</strong></div>
+                                <div class="stat"><span>Race Wins</span><strong>5</strong></div>
+                            </div>
+                            <p>The Monegasque prodigy with lightning-fast qualifying pace and race intelligence.</p>
+                            <div class="team-tag ferrari-tag">FERRARI</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="races" class="section races-section">
+            <div class="container">
+                <h2 class="section-title">2025 RACE CALENDAR</h2>
+                <div class="section-subtitle">GLOBAL COMPETITION ON LEGENDARY CIRCUITS</div>
+                
+                <div class="race-calendar">
+                    <div class="race-event completed">
+                        <div class="race-date">MAR 2</div>
+                        <div class="race-details">
+                            <div class="race-name">BAHRAIN GRAND PRIX</div>
+                            <div class="race-location">Sakhir</div>
+                        </div>
+                        <div class="race-winner">WINNER: M. VERSTAPPEN</div>
+                    </div>
+                    
+                    <div class="race-event completed">
+                        <div class="race-date">MAR 16</div>
+                        <div class="race-details">
+                            <div class="race-name">SAUDI ARABIAN GRAND PRIX</div>
+                            <div class="race-location">Jeddah</div>
+                        </div>
+                        <div class="race-winner">WINNER: L. HAMILTON</div>
+                    </div>
+                    
+                    <div class="race-event next-race">
+                        <div class="race-date">MAY 26</div>
+                        <div class="race-details">
+                            <div class="race-name">MONACO GRAND PRIX</div>
+                            <div class="race-location">Monte Carlo</div>
+                        </div>
+                        <div class="race-status">NEXT RACE</div>
+                    </div>
+                    
+                    <div class="race-event">
+                        <div class="race-date">JUN 9</div>
+                        <div class="race-details">
+                            <div class="race-name">CANADIAN GRAND PRIX</div>
+                            <div class="race-location">Montreal</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="#" class="cta-button primary">FULL CALENDAR</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div class="f">F</div>
+                <div class="one">1</div>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>RACING</h4>
+                    <ul>
+                        <li><a href="#">Teams</a></li>
+                        <li><a href="#">Drivers</a></li>
+                        <li><a href="#">Schedule</a></li>
+                        <li><a href="#">Results</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>INFORMATION</h4>
+                    <ul>
+                        <li><a href="#">About F1</a></li>
+                        <li><a href="#">Rules & Regulations</a></li>
+                        <li><a href="#">F1 Glossary</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>FOLLOW US</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">FB</a>
+                        <a href="#" class="social-icon">TW</a>
+                        <a href="#" class="social-icon">IG</a>
+                        <a href="#" class="social-icon">YT</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Formula 1 Fan Website. All rights reserved.</p>
+            <div class="legal-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="checkered-flag-overlay"></div>
+</body>
+</html>
